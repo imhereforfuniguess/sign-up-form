@@ -6,25 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     
     <div class="picturePanel"> 
-    <!-- logo and background will have to use absolute positioning-->
         <div class="logoPanel">
-            
+            <div class="logo"></div>
         </div>
-
     </div>
     <div class="formPanel">
         <div class="descriptionPanel">
-            <p>How you attack this project is mostly up 
+            <h3 class="descriptionText">How you attack this project is mostly up 
                 to you, but it is wise to begin by scaffolding 
                 out the structure of the page, and then take the 
                 various sections one by one.
-            </p>
+            </h3>
         </div>
         <div class="formPanel">
+            
+            <div class="formTitlePanel">
+                <h3>Let's do this</h3>
+            </div>
+            
+            <div class="formForm">
+                <form action="example.com/path" method="post">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name">
+                    <label for="user_email">Email Address:</label>
+                    <input type="email" id="user_email" name="email" placeholder="you@example.com">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="tel" id="phone_number" name="phone_number">
+                    <label for="user_password">Password:</label>
+                    <input type="password" id="user_password" name="password">
+                    <label for="user_password">Confirm password:</label>
+                    <input type="password" id="user_password" name="password">
+                </form>
+            </div>
 
         </div>
         <div class="buttonPanel">
