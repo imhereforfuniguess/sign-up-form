@@ -23,26 +23,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 
 
 body{
@@ -58,6 +38,7 @@ div{
 	border-width: 1px;
 }
 
+/* Picture side */
 .picturePanel{
     background-color: rgb(255, 0, 0);
     flex: 0.5;
@@ -78,13 +59,19 @@ div{
 	justify-content: center;
 }
 
+.logo{
+	background-color: rgb(255, 255, 255);
+	width: 100px;
+	height: 100px;
+
+}
+
+/* Form side */
 .formPanel{
-    background-color: rgb(43, 43, 219);
     flex: 2.1;
 	display: flex;
 	height: 1250px;
 	flex-direction: column;
-	background-color: rgb(121, 211, 211);
 	flex:1
 }
 
@@ -92,12 +79,39 @@ div{
 	flex: 1;
 }
 
-.formForm{
+/* Description */
+.descriptionPanel{
+	flex: 1;
+	background-color: azure;
+	position: relative;
+	height: 500px;
+	text-align: left;
+}
+.descriptionText{
+	position: relative;
+	bottom: -100px;
+	padding: auto;
+	margin: auto;
+}
+
+/* Form Form */
+.formFormPanel{
 	flex: 6;
+	background-color: rgb(121, 211, 211);
 	flex-direction: column;
 	display: flex;
-	align-items: center;
 }
+
+
+.formPanel > *:first-child{
+	padding-left: 50px;
+	padding-right: 50px;
+	font-weight: 600;
+}
+
+
+
+
 input,
 textarea,
 select {
@@ -111,44 +125,53 @@ label{
 	text-transform: uppercase;
 }
 
-.formForm>*:{
-	background-color: bisque;
-}
-
-form>*{
-	display: block;
-}
-
-.descriptionPanel{
-	flex: 1;
-	background-color: azure;
-	position: relative;
-	height: 500px;
-	text-align: left;
-}
-
-.descriptionText{
-	position: relative;
-	bottom: -100px;
-	padding: auto;
-	margin: auto;
-}
-
-.logo{
-	background-color: rgb(255, 255, 255);
-	width: 100px;
-	height: 100px;
-
-}
 
 .buttonPanel{
 	flex: 1;
 	background-color: rgb(211, 121, 179);
 }
 
-.formPanel > *:first-child{
-	padding-left: 50px;
-	padding-right: 150px;
-	font-weight: 600;
+
+
+.formFormPanel>form{
+	background-color: beige;
 }
 
+
+.form-row {
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.form-row input {
+	background-color: #FFFFFF;
+	border: 1px solid #D6D9DC;
+	border-radius: 3px;
+	width: 30%;
+	padding: 7px;
+	font-size: 14px;
+}
+
+.form-row label {
+	margin-bottom: 15px;
+  }
+
+
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form-row input[type='text'] {
+    width: 250px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
