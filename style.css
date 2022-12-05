@@ -95,8 +95,24 @@ div{
 .formForm{
 	flex: 6;
 	flex-direction: column;
-	background-color: rgb(119, 146, 146);
 	display: flex;
+	align-items: center;
+}
+input,
+textarea,
+select {
+  width: 150px;
+  padding: 3px 10px 3px 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+label{
+	text-transform: uppercase;
+}
+
+.formForm>*:{
+	background-color: bisque;
 }
 
 form>*{
