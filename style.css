@@ -96,7 +96,6 @@ div{
 
 /* Form Form */
 .formFormPanel{
-	flex: 6;
 	background-color: rgb(121, 211, 211);
 	flex-direction: column;
 	display: flex;
@@ -112,20 +111,6 @@ div{
 
 
 
-input,
-textarea,
-select {
-  width: 150px;
-  padding: 3px 10px 3px 10px;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-label{
-	text-transform: uppercase;
-}
-
-
 .buttonPanel{
 	flex: 1;
 	background-color: rgb(211, 121, 179);
@@ -137,41 +122,36 @@ label{
 	background-color: beige;
 }
 
-
 .form-row {
-	margin-bottom: 40px;
 	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
+	height: 100px;
+    align-items: center;
+	justify-content: center;
 }
 
-.form-row input {
+.form-row-element input {
 	background-color: #FFFFFF;
 	border: 1px solid #D6D9DC;
 	border-radius: 3px;
-	width: 30%;
+	width: 50%;
 	padding: 7px;
 	font-size: 14px;
 }
 
 .form-row label {
-	margin-bottom: 15px;
-  }
+	text-align: left;
+	width: 50%;
+	padding: 7px;
+}
 
-
-  .form-row {
-    flex-direction: row;
-    align-items: flex-start; /* To avoid stretching */
-    margin-bottom: 20px;
-  }
-  .form-row input[type='text'] {
-    width: 250px;
-    height: initial;
-  }
-  .form-row label {
-    text-align: right;
-    width: 120px;
-    margin-top: 7px;
-    padding-right: 20px;
-  }
+.form-row-element{
+	flex: 1;
+	border: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
