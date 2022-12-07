@@ -25,46 +25,69 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
+:root {
+	--black: rgb(13, 13, 13);
+	--white: rgb(255, 252, 252);
+}
+
 body{
     display: flex;
-    flex-direction: row;
-
 	font-family: Verdana, sans-serif;
 	font-size: 25px;
 }
 
 div{
 	border-style: solid;
-	border-width: 1px;
+	/* border-width: 1px; */
 }
 
 /* Picture side */
 .picturePanel{
-    background-color: rgb(255, 0, 0);
+	position: relative;
     flex: 0.5;
 	display: flex;
 	height: 1250px;
+	flex-direction: column;
+}
+
+.card-image{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	object-fit:cover; 
+}
+
+.logo-image{
+	object-fit:fill; 
+	height: 100%;
+	background: var(--white);
+	width: 100%;
 }
 
 .logoPanel{
-	background-color: black;
-	height: 200px;
-	width: 100px;
-	opacity: 0.7;
-	flex: 1;
-	position: relative;
-	top:300px;
+	position: absolute;
+	width: 100%;
+	background: var(--white);
+	opacity: 0.6;
+	top: 10rem;
 	display: flex;
-	align-items: center;
+	height: 200px;
 	justify-content: center;
+	align-items: center;
 }
+
 
 .logo{
-	background-color: rgb(255, 255, 255);
-	width: 100px;
-	height: 100px;
+	background-color: var(--white);
+	width: 150px;
+	height: 150px;
 
 }
+
+.shout-out{
+	flex: 1;
+}
+
 
 /* Form side */
 .formPanel{
@@ -82,13 +105,14 @@ div{
 /* Description */
 .descriptionPanel{
 	flex: 1;
-	background-color: azure;
+	background-color: var(--white);
 	position: relative;
 	height: 500px;
 	text-align: left;
 }
 .descriptionText{
 	position: relative;
+	color: var(--black);
 	bottom: -100px;
 	padding: auto;
 	margin: auto;
@@ -96,13 +120,15 @@ div{
 
 /* Form Form */
 .formFormPanel{
-	background-color: rgb(121, 211, 211);
+	background: rgba(1, 1, 1, 0.167);
 	flex-direction: column;
 	display: flex;
+	color: var(--black);
+	padding-right: 200px;
 }
 
 
-.formPanel > *:first-child{
+.formPanel > *{
 	padding-left: 50px;
 	padding-right: 50px;
 	font-weight: 600;
@@ -110,17 +136,14 @@ div{
 
 
 
-
 .buttonPanel{
 	flex: 1;
-	background-color: rgb(211, 121, 179);
+	background-color: var(--white);
+	box-shadow: 10px 10px 100px;
 }
 
 
 
-.formFormPanel>form{
-	background-color: beige;
-}
 
 .form-row {
 	display: flex;
@@ -135,24 +158,26 @@ div{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	align-items: center;
+	align-items: right;
 }
 
 .form-row-element input {
-	background-color: #FFFFFF;
-	border: 1px solid #D6D9DC;
+	background-color: white;
 	border-radius: 3px;
-	width: 50%;
-	padding: 7px;s
+	width: 70%;
+	padding-left: 0px;
 	font-size: 14px;
+	box-sizing: border-box;
+	padding: 7px;
 }
 
 .form-row label {
-	line-height: 0.8em;
-	
+	line-height: 0.8em; 
+	box-sizing: border-box;
 	text-align: left;
 	display: flex;
-	width: 50%;
+	font-variant-caps: all-small-caps;
+	width: 70%;
 	padding: 7px;
 	padding-top: 0px;
 	padding-left: 0px;
