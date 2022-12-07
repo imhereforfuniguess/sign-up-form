@@ -81,7 +81,6 @@ div{
 	background-color: var(--white);
 	width: 150px;
 	height: 150px;
-
 }
 
 .shout-out{
@@ -95,7 +94,7 @@ div{
 	display: flex;
 	height: 1250px;
 	flex-direction: column;
-	flex:1
+	flex:1;
 }
 
 .formTitlePanel{
@@ -104,10 +103,9 @@ div{
 
 /* Description */
 .descriptionPanel{
-	flex: 1;
+	flex: 0.7;
 	background-color: var(--white);
 	position: relative;
-	height: 500px;
 	text-align: left;
 }
 .descriptionText{
@@ -125,6 +123,8 @@ div{
 	display: flex;
 	color: var(--black);
 	padding-right: 200px;
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 
@@ -134,13 +134,6 @@ div{
 	font-weight: 600;
 }
 
-
-
-.buttonPanel{
-	flex: 1;
-	background-color: var(--white);
-	box-shadow: 10px 10px 100px;
-}
 
 
 
@@ -183,3 +176,15 @@ div{
 	padding-left: 0px;
 }
 
+
+.buttonPanel{
+	flex: 1;
+	background-color: var(--white);
+}
+
+button{
+	width: 30%;
+	height: 50px;
+	border-radius: 10px;
+	margin: 20px 0px 20px 0px;
+}
