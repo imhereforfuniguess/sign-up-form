@@ -50,8 +50,6 @@ body{
 }
 /* TEMP FOR SEEING STUFF */
 div{
-	border-style: solid !important;
-	border-width: 1px !important; 
 }
 
 .main{
@@ -60,9 +58,13 @@ div{
 	width: 100vw;
 }
 
+*{
+}
 
 p{
 	font-style:normal;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 }
 
 em{
@@ -79,13 +81,14 @@ strong{
 .picturePanel{
 	flex-grow: 1;
 	position: relative;
-	width: 60vw;
+	width: 40vw;
 	min-width: 345px;
-	height: 100vh;
 	background: url(./images/background4.jpg);
-	background-size: cover;
+	background-size:cover;
 	display: flex;
 	flex-direction: column;
+	background-color: black;
+	height: 100vh;
 }
 
 .logoPanel{
@@ -144,12 +147,14 @@ strong{
 /* Form Form */
 .formFormPanel{
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	padding-right: 100px;
-	padding-bottom: 30px;
 	background-color: rgb(19, 15, 15);
 	padding-top: 30px;
+	padding-bottom: 60px;
 	box-shadow: 0px 10px 20px red;
+	
 	height: fit-content;
 }
 
@@ -157,9 +162,24 @@ form {
 	display: flex;
 	width: 60vw;
 	flex-flow: row wrap;
-	gap: 1rem;
+	gap: 1.2rem;
 	font-size: 1rem;
-  }
+}
+
+
+label {
+	flex-direction: column;
+	line-height: 0.8em; 
+	font-size: 1rem;
+	width: 15rem;
+	display: flex;
+	font-variant-caps: all-small-caps;
+}
+
+.doThisText{
+	font-variant-caps: all-small-caps;
+	font-size: 1.5rem;
+}
 
 .formPanel > *{
 	padding-left: 50px;
@@ -167,82 +187,47 @@ form {
 	padding-right: 100px;
 }
 
-.form-row {
-	display: flex;
-	height: 100px;
-	align-items: right;
-	flex-flow: row wrap;
 
-}
-
-.form-row-element{
-	flex: 1;
-	border: 0;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: right;
-	
-	
-
-}
-
-.form-row-element input {
+input {
 	background-color: rgb(30, 30, 30);
-	width: 400px;
 	color: var(--color-text-main);
 	padding-left: 0px;
 	box-sizing: border-box;
 	padding: 7px;
-	transition: 0.2s;
 	outline: none;
-
+	border: 1px solid rgb(13, 12, 12);
+	padding: 10px;
+	margin-top: 7px;
 
 }
 
 input:focus {
-	border: 3px solid rgb(231, 24, 24);
+	border: 1px solid rgb(231, 24, 24);
 	padding-top: 10px;
 }
 
 
 
 input:active {
-	border: 3px solid rgb(231, 24, 24);
-}
-
-.form-row label {
-	line-height: 0.8em; 
-	box-sizing: border-box;
-	font-size: 1rem;
-	text-align: left;
-	display: flex;
-	font-variant-caps: all-small-caps;
-	width: 70%;
-	padding: 7px;
-	padding-top: 0px;
-	padding-left: 0px;
+	border: 1px solid rgb(231, 24, 24);
 }
 
 
 .buttonPanel{
 	flex: 1;
-	padding-top: 50px;
 	display: flex;
     width: 60vw;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
-    flex-grow: 2;
 }
 
 button{
-	height: 50px;
-	margin: 20px 0px 20px 0px;
+	margin-top: 50px;
+	padding: 15px;
 	font-size: 1.2rem;
 	font-weight: 800;
 	border-radius: 4px;
+	border-width: 3px;
 	border-color: var(--color-elements);
 	color: var(--color-elements);
 	background-color: var(--black);
@@ -250,11 +235,10 @@ button{
 
 
 button:hover {
-	transition: 0.2s;
-
+	transition: 0.21s;
 	background-color: var(--color-elements);
 	color: var(--black);
-
+	border-color: var(--black);
 
 }
 
@@ -262,6 +246,16 @@ a{
 	color: var(--color-elements);
 	text-decoration: none;
 	
+}
+
+.shout-out{
+	color: var(--color-elements);
+	text-decoration: none;
+	position: absolute;
+	bottom: 0px;
+    right: 90px;
+	font-size: .8rem;	
+	color: var(--color-text-main);
 }
 
 @media screen and (max-width: 850px) {
